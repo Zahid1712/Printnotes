@@ -96,7 +96,7 @@ export default function App() {
           const ctx = canvas.getContext("2d", { alpha: false })!;
           ctx.fillStyle = "#fff";
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-          await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+          await page.render({ canvasContext: ctx, viewport }).promise;
           newSlides.push({
             id: uid(), fileId, fileName: file.name, pageNumber: p,
             width: viewport.width, height: viewport.height,
